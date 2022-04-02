@@ -1,0 +1,28 @@
+FROM jaegertracing/all-in-one:latest
+
+# Collector zipkin.host port
+EXPOSE 9411
+
+# Agent zipkin.thrift compact
+EXPOSE 5775/udp
+
+# Agent jaeger.thrift compact
+EXPOSE 6831/udp
+
+# Agent jaeger.thrift binary
+EXPOSE 6832/udp
+
+# Agent config HTTP
+EXPOSE 5778
+
+# Collector HTTP
+EXPOSE 14268
+
+# Collector gRPC
+EXPOSE 14250
+
+# Web HTTP
+EXPOSE 16686
+
+# Delve
+EXPOSE 12345
